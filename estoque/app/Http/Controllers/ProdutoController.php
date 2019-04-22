@@ -12,6 +12,12 @@ class ProdutoController extends Controller
         return view('produto.listagem')->with('produtos', $produtos);
     }
 
+    public function listaJson()
+    {
+        $produtos = DB::select('select * from produtos');
+        return $produtos;
+    }
+
     /*public function mostra()
     {
         // This gets it from the querystring
@@ -58,6 +64,6 @@ class ProdutoController extends Controller
             [$nome, $quantidade, $valor, $descricao]
         );
 
-        return view('produto.adicionado')->with('nome', $nome);
+        return redirect()->action('ProdutoController@lista')->withInput(Request::only('nome'));
     }
 }
