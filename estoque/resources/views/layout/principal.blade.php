@@ -26,7 +26,7 @@
         @yield('conteudo')
 
         <footer class="footer">
-            <p>© Livro de Laravel do Alura.</p>
+            <p>© Livro de Laravel da Alura.</p>
         </footer>
     </div>
 </body>
