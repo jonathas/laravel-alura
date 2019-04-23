@@ -20,6 +20,9 @@
                     <td>
                         <a href="/produtos/mostra/{{$p->id}}">
                             Visualizar
+                        </a> |
+                        <a href="/produtos/remove/{{$p->id}}">
+                            Remover
                         </a>
                     </td>
                 </tr>
