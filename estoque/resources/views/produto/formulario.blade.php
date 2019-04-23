@@ -17,6 +17,10 @@
             <input class="form-control" type="text" name="quantidade" />
         </div>
         <div class="form-group">
+            <label for="tamanho">Tamanho</label>
+            <input class="form-control" type="text" name="tamanho" />
+        </div>
+        <div class="form-group">
             <label for="descricao">Descrição</label>
             <textarea class="form-control" name="descricao" id="descricao" cols="30" rows="10"></textarea>
         </div>
