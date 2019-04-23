@@ -1,6 +1,15 @@
 @extends('layout.principal')
 
 @section('conteudo')
+
+<div class="alert alert-danger">
+    <ul>
+        @foreach($errors->all() as $error)
+        <li>{{$error}}</li>
+        @endforeach
+    </ul>
+</div>
+
     <form action="/produtos/adiciona" method="POST">
         <input type="hidden" name="_token" value={{csrf_token()}} />
 

@@ -1,8 +1,10 @@
 <?php namespace estoque\Http\Controllers;
 
 use estoque\Produto;
+use Validator;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Request;
+use estoque\Http\Requests\ProdutoRequest;
 
 class ProdutoController extends Controller
 {
@@ -52,7 +54,7 @@ class ProdutoController extends Controller
         return view('produto.formulario');
     }
 
-    public function adiciona()
+    public function adiciona(ProdutoRequest $request)
     {
         /*$params = Request::all();
         $produto = new Produto($params);
@@ -60,7 +62,7 @@ class ProdutoController extends Controller
         $produto->save();*/
 
         // Even simpler
-        Produto::create(Request::all());
+        Produto::create($request->all());
 
         return redirect()->action('ProdutoController@lista')->withInput(Request::only('nome'));
     }
