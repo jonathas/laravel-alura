@@ -1,4 +1,4 @@
-@extends('layout.principal')
+@extends('layouts.principal')
 
 @section('conteudo')
 <h1>Detalhes do produto {{$p->nome}}</h1>

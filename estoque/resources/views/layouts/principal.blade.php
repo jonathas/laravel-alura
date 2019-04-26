@@ -20,6 +20,13 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="{{action('ProdutoController@lista')}}">Listagem</a></li>
                     <li><a href="{{action('ProdutoController@novo')}}">Novo</a></li>
+                    @if (Auth::guest())
+                        <li><a href="/login">Login</a></li>
+                        <li><a href="/register">Register</a></li>
+                    @else
+                        <li>{{ Auth::user()->name }} </li>
+                        <li><a href="/logout">Logout</a></li>
+                    @endif
                 </ul>
             </div>
         </nav>

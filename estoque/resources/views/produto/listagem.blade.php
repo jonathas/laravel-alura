@@ -1,4 +1,4 @@
-@extends('layout.principal')
+@extends('layouts.principal')
 
 @section('conteudo')
     @if(empty($produtos))
