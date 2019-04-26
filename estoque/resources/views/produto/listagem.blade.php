@@ -11,6 +11,7 @@
             <th>Descrição</th>
             <th>Quantidade</th>
             <th>Tamanho</th>
+            <th>Categoria</th>
             <th></th>
             @foreach ($produtos as $p)
                 <tr class="{{$p->quantidade <= 1 ? 'alert-danger' : ''}}">
@@ -19,6 +20,7 @@
                     <td>{{$p->descricao}}</td>
                     <td>{{$p->quantidade}}</td>
                     <td>{{$p->tamanho}}</td>
+                    <td>{{$p->categoria->nome}}</td>
                     <td>
                         <a href="/produtos/mostra/{{$p->id}}">
                             Visualizar
